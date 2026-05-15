@@ -128,20 +128,23 @@ WUTU_BUSINESS_OS/
 <!-- AUTO -->
 
 ## 🕐 마지막 업데이트
-**2026.05.15 07:23:52 KST** — `main` 브랜치
+**2026.05.15 07:36:56 KST** — `main` 브랜치
 
 ## 📝 최근 커밋 이력 (최근 7개)
 ```
+ac5bc21 chore: switch to pre-commit hook for PROGRESS.md
 39d7767 docs: update PROGRESS.md
 7ead4c5 docs: update PROGRESS.md
 4e0a193 docs: update PROGRESS.md
 4a01b63 chore: ignore only .claude/settings.local.json
 2520788 docs: update PROGRESS.md
 1927aea test: verify pre-push hook
-f425074 docs: update PROGRESS.md
 ```
 
 ## 📂 이번 커밋 변경 파일
 ```
-
+ package.json             |  3 ++-
+ scripts/install-hooks.js | 15 +++++++++++++++
+ scripts/pre-commit       | 26 ++++++++++++++++++++++++++
+ 3 files changed, 43 insertions(+), 1 deletion(-)
 ```

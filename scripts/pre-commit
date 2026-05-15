@@ -1,0 +1,26 @@
+#!/bin/bash
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+PROGRESS="$REPO_ROOT/PROGRESS.md"
+
+TIMESTAMP=$(TZ='Asia/Seoul' date '+%Y.%m.%d %H:%M:%S')
+BRANCH=$(git branch --show-current)
+COMMITS=$(git log --oneline -7 2>/dev/null || echo "(첫 번째 커밋)")
+STAGED=$(git diff --cached --stat 2>/dev/null)
+
+STATIC=$(sed -n '1,/<!-- AUTO -->/{ /<!-- AUTO -->/d; p }' "$PROGRESS")
+
+{
+  printf '%s\n' "$STATIC"
+  printf '<!-- AUTO -->\n\n'
+  printf '## 🕐 마지막 업데이트\n'
+  printf '**%s KST** — `%s` 브랜치\n\n' "$TIMESTAMP" "$BRANCH"
+  printf '## 📝 최근 커밋 이력 (최근 7개)\n'
+  printf '```\n%s\n```\n\n' "$COMMITS"
+  printf '## 📂 이번 커밋 변경 파일\n'
+  printf '```\n%s\n```\n' "$STAGED"
+} > "$PROGRESS"
+
+git add PROGRESS.md
+echo "✅ PROGRESS.md 업데이트 완료 ($TIMESTAMP)"
+exit 0
