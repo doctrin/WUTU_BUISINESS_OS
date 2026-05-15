@@ -128,21 +128,20 @@ WUTU_BUSINESS_OS/
 <!-- AUTO -->
 
 ## 🕐 마지막 업데이트
-**2026.05.15 07:21:48 KST** — `main` 브랜치
+**2026.05.15 07:23:52 KST** — `main` 브랜치
 
 ## 📝 최근 커밋 이력 (최근 7개)
 ```
+39d7767 docs: update PROGRESS.md
 7ead4c5 docs: update PROGRESS.md
 4e0a193 docs: update PROGRESS.md
 4a01b63 chore: ignore only .claude/settings.local.json
 2520788 docs: update PROGRESS.md
 1927aea test: verify pre-push hook
 f425074 docs: update PROGRESS.md
-aa1bc66 docs: add PROGRESS.md and pre-push hook
 ```
 
-## 📂 마지막 커밋 변경 파일
+## 📂 이번 커밋 변경 파일
 ```
- PROGRESS.md | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
+
 ```
